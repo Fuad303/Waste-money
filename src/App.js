@@ -11,7 +11,8 @@ function App() {
   const [basket, setBasket] = useState([]);
   const [total, setTotal] = useState(0);
   const [basketIcon, setBasketIcon] = useState(false)
-
+  console.log(setMoney)
+  
   function toggleBasket(){
     setBasketIcon(prevIcon => !prevIcon)
   }
