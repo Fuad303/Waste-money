@@ -32,7 +32,7 @@ function Product({money, total, product, basket, setBasket}) {
     
     return (
     <div className='product'>
-      <div className='product-img'><img src={product.image}/></div>
+      <div className='product-img'><img alt='product-img' src={product.image}/></div>
       <div className='product-title'><h3>{product.title}</h3></div>
       <style jsx>{
         `.product{
@@ -43,7 +43,7 @@ function Product({money, total, product, basket, setBasket}) {
       <div className='product-price'><p>${moneyFormat(product.price)}</p></div>
       <div className='actions'>
         <button className='sell-btn' disabled={!basketItem} onClick={removeBasket}>Sat</button>
-        <span className='amount'>{basketItem && basketItem.amount || 0}</span>
+        <span className='amount'>{basketItem ? basketItem.amount : 0}</span>
         <button className='buy-btn' disabled={total + product.price > money} onClick={addBasket}>Al</button>
       </div>
       <style jsx>
